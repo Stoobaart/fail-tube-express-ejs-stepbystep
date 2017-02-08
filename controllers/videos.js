@@ -32,7 +32,10 @@ function editVideos(req, res) {
 }
 
 function updateVideos(req, res) {
-	res.send("update");
+	var video = req.body;
+	video.id = req.params.id;
+	videos[video.id] = video;
+	res.redirect("/");
 }
 
 function deleteVideos(req, res) {
