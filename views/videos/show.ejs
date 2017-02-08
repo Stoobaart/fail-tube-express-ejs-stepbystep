@@ -3,3 +3,10 @@
 <p><%= video.description %></p>
 <p class="failLevel">fail level: <%= video.failLevel %></p>
 <p class="nsfw">nsfw?: <%= video.nsfw %></p>
+
+<a href="/<%= video.id %>/edit">edit</a>
+
+<form class="delete" action="/<%= video.id %>" method="post">
+	<input type="hidden" name="method" value="delete">
+	<input type="submit" value="delete">
+</form>
