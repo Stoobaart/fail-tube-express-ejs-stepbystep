@@ -5,7 +5,7 @@ function indexVideos(req, res) {
 }
 
 function showVideos(req, res) {
-	res.render("videos/show");
+	res.render("videos/show", { video: videos[req.params.id] });
 }
 
 function newVideos(req, res) {
