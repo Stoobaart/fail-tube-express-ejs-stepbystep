@@ -21,11 +21,14 @@ function newVideos(req, res) {
 }
 
 function createVideos(req, res) {
-	res.res("create");
+	var video = req.body;
+	video.id = videos.length;
+	videos.push(video);
+	res.redirect("/");
 }
 
 function editVideos(req, res) {
-	res.render("videos/edit");
+	res.render("videos/edit", { video: videos[req.params.id] });
 }
 
 function updateVideos(req, res) {
