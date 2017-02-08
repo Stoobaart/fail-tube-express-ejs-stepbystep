@@ -39,7 +39,11 @@ function updateVideos(req, res) {
 }
 
 function deleteVideos(req, res) {
-	res.send("delete");
+	videos.splice(req.params.id, 1);
+	for (var i = 0; i<videos.length; i++) {
+		videos[i].id = i;
+	}
+	res.redirect("/");
 }
 
 module.exports = {
