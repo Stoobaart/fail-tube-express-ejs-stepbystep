@@ -1,3 +1,5 @@
+var videos = require("../models/video");
+
 function indexVideos(req, res) {
 	res.render("videos/index");
 }
@@ -25,7 +27,6 @@ function updateVideos(req, res) {
 function deleteVideos(req, res) {
 	res.send("delete");
 }
-
 
 module.exports = {
 	index: indexVideos,
