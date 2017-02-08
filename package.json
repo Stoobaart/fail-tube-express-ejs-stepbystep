@@ -1,0 +1,14 @@
+{
+  "name": "failtube",
+  "version": "1.0.0",
+  "description": "Youtube clone for fails",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stu Smith",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
