@@ -9,7 +9,15 @@ function showVideos(req, res) {
 }
 
 function newVideos(req, res) {
-	res.render("videos/new");
+  var newVideo = {
+      id: "",
+      title: "",
+      description: "",
+      url: "",
+      failLevel: "",
+      nsfw: ""
+  };
+  res.render("videos/new", { video: newVideo });
 }
 
 function createVideos(req, res) {
